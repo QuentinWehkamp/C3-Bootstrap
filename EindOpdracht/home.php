@@ -10,9 +10,9 @@
 </head>
 
 <body>
-  <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+  <nav class="navbar py-0 ml-5 mr-5 mt-2 rounded fixed-top navbar-expand-lg navbar-dark bg-dark">
     <a class="navbar-brand" href="home.php">
-      <img src="files/logo.png" alt="Dedsec logo" width="100">
+      <img src="files/logo.png" alt="Dedsec logo" width="80">
     </a>
     <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
       <span class="navbar-toggler-icon"></span>
@@ -43,15 +43,15 @@
   </nav>
 
   <div id="carouselExampleControls" class="carousel slide" data-ride="carousel">
-    <div class="carousel-inner">
+    <div class="carousel-inner w-100">
       <div class="carousel-item active">
-        <img src="files/wd1.jpg" class="d-block w-75 mx-auto" alt="Watch_Dogs">
+        <img src="files/wd1.jpg" class="d-block mx-auto img-fluid" alt="Watch_Dogs">
       </div>
       <div class="carousel-item">
-        <img src="files/wd2.jpg" class="d-block w-75 mx-auto" alt="Watch_Dogs 2">
+        <img src="files/wd2.jpg" class="d-block mx-auto" alt="Watch_Dogs 2">
       </div>
       <div class="carousel-item">
-        <img src="files/wd3.jpg" class="d-block w-75 mx-auto" alt="Watch_Dogs Legion">
+        <img src="files/wd3.jpg" class="d-block mx-auto" alt="Watch_Dogs Legion">
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">

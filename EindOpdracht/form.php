@@ -5,12 +5,15 @@
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
+    <link rel="stylesheet" href="master.css">
     <title>Hello, world!</title>
 </head>
 
 <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Navbar</a>
+    <nav class="navbar py-0 ml-5 mr-5 mt-2 rounded fixed-top navbar-expand-lg navbar-dark bg-dark">
+        <a class="navbar-brand" href="home.php">
+            <img src="files/logo.png" alt="Dedsec logo" width="80">
+        </a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNavDropdown" aria-controls="navbarNavDropdown" aria-expanded="false" aria-label="Toggle navigation">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -19,8 +22,8 @@
                 <li class="nav-item">
                     <a class="nav-link" href="home.php">Home <span class="sr-only">(current)</span></a>
                 </li>
-                <li class="nav-item">
-                    <a class="nav-link active" href="form.php">Formulier</a>
+                <li class="nav-item active">
+                    <a class="nav-link" href="form.php">Formulier</a>
                 </li>
                 <li class="nav-item">
                     <a class="nav-link" href="#">Pricing</a>
@@ -39,18 +42,23 @@
         </div>
     </nav>
 
-    <form>
-        <div class="form-group">
-            <label for="exampleInputEmail1">Naam</label>
-            <input type="name" class="form-control" id="exampleInputname1" aria-describedby="nameHelp">
-        </div>
-        <div class="form-group">
-            <label for="exampleInputAdres1">Adres</label>
-            <input type="Adres" class="form-control" id="exampleInputPassword1">
-        </div>
-        </div>
-        <button type="submit" class="btn btn-primary">Submit</button>
-    </form>
+    <!-- Name and adress form -->
+    <br><br><br><br><br>
+    <div class="jumbotron ml-5 mr-5">
+        <form>
+            <div class="form-row">
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Naam">
+                </div>
+                <div class="col">
+                    <input type="text" class="form-control" placeholder="Adres">
+                </div>
+                <div class="col w-50">
+                    <input type="submit" class="form-control">
+                </div>
+            </div>
+        </form>
+    </div>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
     <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
