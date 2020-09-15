@@ -48,10 +48,10 @@
         <img src="files/wd1.jpg" class="d-block mx-auto img-fluid" alt="Watch_Dogs">
       </div>
       <div class="carousel-item">
-        <img src="files/wd2.jpg" class="d-block mx-auto" alt="Watch_Dogs 2">
+        <img src="files/wd2.jpg" class="d-block mx-auto img-fluid" alt="Watch_Dogs 2">
       </div>
       <div class="carousel-item">
-        <img src="files/wd3.jpg" class="d-block mx-auto" alt="Watch_Dogs Legion">
+        <img src="files/wd3.jpg" class="d-block mx-auto img-fluid" alt="Watch_Dogs Legion">
       </div>
     </div>
     <a class="carousel-control-prev" href="#carouselExampleControls" role="button" data-slide="prev">
@@ -62,6 +62,39 @@
       <span class="carousel-control-next-icon" aria-hidden="true"></span>
       <span class="sr-only">Next</span>
     </a>
+  </div>
+
+  <div class="row">
+    <div class="well mx-auto text-light w-25">
+      <h1>Watch_Dogs</h1>
+      <p>Watch Dogs speelt zich af in de stad Chicago en draait om het hoofdpersonage Aiden Pearce, een briljante hacker die in zijn gewelddadige jeugd al riskante criminele activiteiten ondernam. 
+        Met zijn bijzondere mobiele telefoon kan hij alles wat te maken heeft met ctOS hacken. 
+        Dit gebruikt hij om aan de politie te ontkomen, of simpelweg om de beelden van beveiligingscamera's te bekijken. 
+        Verder kan hij persoonlijke informatie van zijn doelwitten downloaden, om ze zo (gemakkelijker) te kunnen lokaliseren. 
+        Ook kan de speler bijvoorbeeld verkeerslichten hacken, om op deze manier een ongeluk als dekking te creëren. 
+        In het spel is het mogelijk om met een auto te rijden en met boten te varen, vliegende voertuigen zijn echter niet mogelijk. 
+        Ook een trein besturen is niet mogelijk, maar de speler kan de trein wel hacken.
+      </p>
+    </div>
+    <div class="well mx-auto text-light ml-5 w-25">
+      <h1>Watch_Dogs 2</h2>
+      <p>Watch Dogs 2 speelt zich af in de stad San Francisco, waar de speler de rol aanneemt van hacker Marcus Holloway. 
+        Hij werkt samen met de hackergroep DedSec, om het stadswijde besturingssysteem ctOS 2.0 te ondermijnen, nadat hij door het systeem onterecht van een delict is veroordeeld. 
+        Dit besturingssysteem heeft onder andere de controle over de stedelijke surveillancesystemen, infrastructuur en persoonlijke gegevens van burgers. 
+        Door deze systemen te hacken krijgt de speler toegang tot bijvoorbeeld bewakingscameras, verkeerslichten en pollers, die tijdens het spelen kunnen worden beïnvloed.
+      </p>
+    </div>
+    <div class="well mx-auto text-light ml-5 w-25">
+      <h1>Watch_Dogs Legion</h2>
+      <p>Watch Dogs: Legion is een third-person action-adventurespel dat zich afspeelt in een dystopisch post-Brexit Londen. 
+        De stad wordt gerund als een politiestaat met constante monitoring van burgers. 
+        De hackergroep Dedsec verzet zich tegen de overheid en probeert de chaos en corruptie tegen te gaan De toekomst in het spel verbeeldt de donkerste visie van de ontwikkelaars op de huidige ontwikkelingen op technologisch gebied.
+        <br>
+        Watch Dogs: Legion heeft geen eenduidige protagonist waarmee de speler speelt zoals in de vorige delen in de serie. 
+        De speler bestuurt in feite de Dedsec-organisatie en kan kiezen als welk lid van Dedsec hij speelt. De speler kan elke burger in het spel rekruteren tot lid van Dedsec en derhalve een speelbaar personage maken. 
+        Elk personage heeft zijn eigen vaardigheden als wel een relatie met Dedsec, dat het rekruteren van de persoon vergemakkelijkt dan wel bemoeilijkt.
+      </p>
+    </div>
   </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
