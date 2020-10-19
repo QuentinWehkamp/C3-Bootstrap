@@ -1,13 +1,12 @@
 $(".name").mouseenter(function () {
-  $(".name-collapse").fadeIn("fast");
-});
-$(".name").mouseleave(function () {
-  $(".name-collapse").fadeOut("fast");
+  $(".adres-collapse").fadeOut("400", function () {
+    $(".name-collapse").fadeIn("400");
+  });
 });
 
+
 $(".adres").mouseenter(function () {
-    $(".adres-collapse").fadeIn("fast");
+  $(".name-collapse").fadeOut("400", function() {
+    $(".adres-collapse").fadeIn("400");
   });
-  $(".adres").mouseleave(function () {
-    $(".adres-collapse").fadeOut("fast");
-  });
+});

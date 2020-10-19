@@ -45,13 +45,13 @@
     <!-- Naam en adres form -->
     <br><br><br><br><br>
     <div class="jumbotron ml-5 mr-5">
-        <form>
+        <form action="form.php" method="POST">
             <div class="form-row">
                 <div class="col">
-                    <input type="text" class="form-control name">
+                    <input type="text" name="name" class="form-control name">
                 </div>
                 <div class="col">
-                    <input type="text" class="form-control adres">
+                    <input type="text" name="adres" class="form-control adres">
                 </div>
                 <div class="col">
                     <input type="submit" class="form-control">
@@ -68,6 +68,26 @@
                 Vul hier uw adres in.
             </div>
         </div>
+        <?php
+        $_POST["name"] = 0;
+        $_POST["adres"] = 0;
+        $namepat = "/^[a-z ,.'-]+$/i";
+        $adrpat = "/^([1-9][e][\s])*([a-zA-Z]+(([\.][\s])|([\s]))?)+[1-9][0-9]*(([-][1-9][0-9]*)|([\s]?[a-zA-Z]+))?$/i";
+        if ($_POST["name"] != 0) {
+            if (!preg_match($namepat, $_POST["name"])) {
+                echo "<div class=\"alert alert-danger\" role=\"alert\">De ingevoerde naam klopt niet</div>";
+            } else {
+                $check = 1;
+            }
+        };
+        if ($_POST["adres"] != 0) {
+            if (!preg_match($adrpat, $_POST["adres"])) {
+                echo "<div class=\"alert alert-danger\" role=\"alert\">Het ingevoerde adres klopt niet</div>";
+            } elseif ($check == 1) {
+                echo "<div class=\"alert alert-success\" role=\"alert\">Dankuwel</div>";
+            }
+        };
+        ?>
 
         <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
         <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
