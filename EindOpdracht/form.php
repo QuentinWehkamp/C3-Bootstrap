@@ -7,6 +7,10 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="master.css">
     <title>Hello, world!</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
+        <script src="validate.js"></script>
 </head>
 
 <body>
@@ -53,7 +57,7 @@
                 <div class="col">
                     <input type="text" name="adres" class="form-control adres">
                 </div>
-                <div class="col">
+                <div class="col-3">
                     <input type="submit" class="form-control">
                 </div>
             </div>
@@ -68,31 +72,31 @@
                 Vul hier uw adres in.
             </div>
         </div>
+        <script>
+            Validate($_POST["name"], $_POST["adres"]);
+        </script>
+        <div id="alert"></div>
         <?php
-        $_POST["name"] = 0;
-        $_POST["adres"] = 0;
-        $namepat = "/^[a-z ,.'-]+$/i";
-        $adrpat = "/^([1-9][e][\s])*([a-zA-Z]+(([\.][\s])|([\s]))?)+[1-9][0-9]*(([-][1-9][0-9]*)|([\s]?[a-zA-Z]+))?$/i";
-        if ($_POST["name"] != 0) {
-            if (!preg_match($namepat, $_POST["name"])) {
-                echo "<div class=\"alert alert-danger\" role=\"alert\">De ingevoerde naam klopt niet</div>";
-            } else {
-                $check = 1;
-            }
-        };
-        if ($_POST["adres"] != 0) {
-            if (!preg_match($adrpat, $_POST["adres"])) {
-                echo "<div class=\"alert alert-danger\" role=\"alert\">Het ingevoerde adres klopt niet</div>";
-            } elseif ($check == 1) {
-                echo "<div class=\"alert alert-success\" role=\"alert\">Dankuwel</div>";
-            }
-        };
+
+        // $namepat = "/^[a-z ,.'-]+$/i";
+        // $adrpat = "/^([1-9][e][\s])*([a-zA-Z]+(([\.][\s])|([\s]))?)+[1-9][0-9]*(([-][1-9][0-9]*)|([\s]?[a-zA-Z]+))?$/i";
+        // if ($_POST["name"] != 0) {
+        //     if (!preg_match($namepat, $_POST["name"])) {
+        //         echo "<div class=\"alert alert-danger\" role=\"alert\">De ingevoerde naam klopt niet</div>";
+        //     } else {
+        //         $check = 1;
+        //     }
+        // };
+        // if ($_POST["adres"] != 0) {
+        //     if (!preg_match($adrpat, $_POST["adres"])) {
+        //         echo "<div class=\"alert alert-danger\" role=\"alert\">Het ingevoerde adres klopt niet</div>";
+        //     } elseif ($check == 1) {
+        //         echo "<div class=\"alert alert-success\" role=\"alert\">Dankuwel</div>";
+        //     }
+        // };
         ?>
 
-        <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-        <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-        <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-        <script src="index.js"></script>
-</body>
 
+</body>
+<script src="index.js"></script>
 </html>
