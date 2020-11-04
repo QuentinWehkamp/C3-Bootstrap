@@ -72,30 +72,13 @@
                 Vul hier uw adres in.
             </div>
         </div>
-        <script>
-            Validate($_POST["name"], $_POST["adres"]);
-        </script>
         <div id="alert"></div>
-        <?php
 
-        // $namepat = "/^[a-z ,.'-]+$/i";
-        // $adrpat = "/^([1-9][e][\s])*([a-zA-Z]+(([\.][\s])|([\s]))?)+[1-9][0-9]*(([-][1-9][0-9]*)|([\s]?[a-zA-Z]+))?$/i";
-        // if ($_POST["name"] != 0) {
-        //     if (!preg_match($namepat, $_POST["name"])) {
-        //         echo "<div class=\"alert alert-danger\" role=\"alert\">De ingevoerde naam klopt niet</div>";
-        //     } else {
-        //         $check = 1;
-        //     }
-        // };
-        // if ($_POST["adres"] != 0) {
-        //     if (!preg_match($adrpat, $_POST["adres"])) {
-        //         echo "<div class=\"alert alert-danger\" role=\"alert\">Het ingevoerde adres klopt niet</div>";
-        //     } elseif ($check == 1) {
-        //         echo "<div class=\"alert alert-success\" role=\"alert\">Dankuwel</div>";
-        //     }
-        // };
-        ?>
-
+        <script>
+            var name = '<?php echo $_POST["name"] ?>';
+            var adres = '<?php echo $_POST["adres"] ?>';
+            Validate(name, adres);
+        </script>
 
 </body>
 <script src="index.js"></script>
