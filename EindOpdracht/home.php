@@ -25,17 +25,13 @@
         <li class="nav-item">
           <a class="nav-link" href="form.php">Formulier</a>
         </li>
-        <li class="nav-item">
-          <a class="nav-link" href="#">Pricing</a>
-        </li>
         <li class="nav-item dropdown">
           <a class="nav-link dropdown-toggle" href="#" id="navbarDropdownMenuLink" role="button" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
-            Dropdown link
+            Meer
           </a>
           <div class="dropdown-menu" aria-labelledby="navbarDropdownMenuLink">
-            <a class="dropdown-item" href="#">Action</a>
-            <a class="dropdown-item" href="#">Another action</a>
-            <a class="dropdown-item" href="#">Something else here</a>
+            <a class="dropdown-item" href="news.php">Nieuws</a>
+            <a class="dropdown-item" href="comment.php">Opmerkingen</a>
           </div>
         </li>
       </ul>
@@ -84,10 +80,10 @@
             Door deze systemen te hacken krijgt de speler toegang tot bijvoorbeeld bewakingscameras, verkeerslichten en pollers, die tijdens het spelen kunnen worden beïnvloed.
           </p>
       </div>
-      
+
     </div>
     <div class="row">
-    <div class="col mx-auto text-light ml-5 w-25">
+      <div class="col mx-auto text-light ml-5 w-25">
         <h1>Watch_Dogs Legion</h2>
           <p>In de nabije toekomst staat Londen voor zijn ondergang.
             Nadat verwoestende terreuraanslagen, veroorzaakt door een mysterieuze entiteit met de naam Zero Day, de stad doen beven, heeft een alziende autoritaire staat het volk onderdrukt.

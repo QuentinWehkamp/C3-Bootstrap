@@ -7,10 +7,6 @@
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="master.css">
     <title>Hello, world!</title>
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
-    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
-    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
-    <script src="validate.js"></script>
 </head>
 
 <body>
@@ -41,42 +37,41 @@
             </ul>
         </div>
     </nav>
-
-    <!-- Naam en adres form -->
     <br><br><br><br><br>
-    <div class="jumbotron ml-5 mr-5">
-        <form action="form.php" method="POST">
-            <div class="form-row">
-                <div class="col">
-                    <input type="text" name="name" class="form-control name">
-                </div>
-                <div class="col">
-                    <input type="text" name="adres" class="form-control adres">
-                </div>
-                <div class="col-3">
-                    <input type="submit" class="form-control">
-                </div>
-            </div>
+
+    <div class="container text-white">
+        <form action="comment.php" method="POST">
+            <label for="name">Naam</label><br>
+            <input type="text" id="name" name="name"><br>
+            <label for="opmerking">Opmerking</label><br>
+            <textarea name="opmerking" id="opmerking" cols="80" rows="5"></textarea>
+            <input type="submit">
         </form>
-        <div class="collapse name-collapse" id="collapseNaam">
-            <div class="card card-body">
-                Vul hier uw naam in.
-            </div>
-        </div>
-        <div class="collapse adres-collapse" id="collapseAdres">
-            <div class="card card-body">
-                Vul hier uw adres in.
-            </div>
-        </div>
-        <div id="alert"></div>
+    </div>
 
-        <script>
-            var name = '<?php echo $_POST["name"] ?>';
-            var adres = '<?php echo $_POST["adres"] ?>';
-            Validate(name, adres);
-        </script>
+    <?php
+    include 'conn.php';
 
+    // sql to create table
+    $sql = "CREATE TABLE IF NOT EXISTS comments (
+    id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
+    name VARCHAR(30) NOT NULL,
+    comment TEXT(280) NOT NULL,
+    reg_date TIMESTAMP DEFAULT CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP
+    )";
+
+    if ($conn->query($sql) === TRUE) {
+        echo "Table MyGuests created successfully";
+    } else {
+        echo "Error creating table: " . $conn->error;
+    }
+
+    $conn->close();
+    ?>
+
+    <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/js/bootstrap.min.js" integrity="sha384-wfSDF2E50Y2D1uUdj0O3uMBJnjuUD4Ih7YwaYd1iqfktj0Uod8GCExl3Og8ifwB6" crossorigin="anonymous"></script>
 </body>
-<script src="index.js"></script>
 
 </html>
