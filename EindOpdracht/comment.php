@@ -4,6 +4,7 @@
 <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <link rel="icon" href="files/icon.png" type="image/png">
     <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
     <link rel="stylesheet" href="master.css">
     <title>Hello, world!</title>
@@ -44,7 +45,7 @@
             <label for="name">Naam</label><br>
             <input type="text" id="name" name="name"><br>
             <label for="opmerking">Opmerking</label><br>
-            <textarea name="opmerking" id="opmerking" cols="80" rows="5"></textarea>
+            <textarea name="opmerking" id="opmerking" cols="80" rows="5"></textarea><br>
             <input type="submit">
         </form>
     </div>
@@ -52,18 +53,27 @@
     <?php
     include 'conn.php';
 
-    // sql to create table
-    $sql = "CREATE TABLE IF NOT EXISTS comments (
+    // create table
+    $table = "CREATE TABLE IF NOT EXISTS comments (
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(30) NOT NULL,
     comment TEXT(280) NOT NULL,
     date DATE NOT NULL
     )";
 
-    $db->query($sql);
+    $db->query($table);
     //
 
-    
+    // insert comment to database
+    $insertcomment = 'INSERT INTO comments
+    VALUES("", $_POST["name"], $_POST["opmerking"], getdate()';
+
+    if(isset($_POST["name"]) && isset($_POST["opmerking"])){
+        if($db->query($insertcomment) == true){
+            echo "<p>Opmerking geplaatst</p>";
+        }
+    };
+    //
 
     $db->close();
     ?>
