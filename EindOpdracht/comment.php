@@ -57,16 +57,15 @@
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(30) NOT NULL,
     comment TEXT(280) NOT NULL,
-    date 
+    date DATE NOT NULL
     )";
 
-    if ($conn->query($sql) === TRUE) {
-        echo "Table MyGuests created successfully";
-    } else {
-        echo "Error creating table: " . $conn->error;
-    }
+    $db->query($sql);
+    //
 
-    $conn->close();
+    
+
+    $db->close();
     ?>
 
     <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
