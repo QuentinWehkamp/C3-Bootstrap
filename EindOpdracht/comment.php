@@ -65,12 +65,16 @@
     //
 
     // insert comment to database
-    $insertcomment = 'INSERT INTO comments
-    VALUES("", $_POST["name"], $_POST["opmerking"], getdate()';
+    if (isset($_POST["name"], $_POST["opmerking"])) {
+        $name = $_POST['name'];
+        $comment = $_POST['opmerking'];
 
-    if(isset($_POST["name"]) && isset($_POST["opmerking"])){
-        if($db->query($insertcomment) == true){
-            echo "<p>Opmerking geplaatst</p>";
+        $insertcomment = "INSERT INTO comments(name, comment) VALUES('$name','$comment')";
+
+        if (isset($name, $comment)) {
+            if ($db->query($insertcomment)) {
+                echo "<p>Opmerking geplaatst</p>";
+            }
         }
     };
     //
