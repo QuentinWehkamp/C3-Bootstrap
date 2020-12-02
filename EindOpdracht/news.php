@@ -7,6 +7,7 @@
   <link rel="icon" href="files/icon.png" type="image/png">
   <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css" integrity="sha384-Vkoo8x4CGsO3+Hhxv8T/Q5PaXtkKtu6ug5TOeNV6gBiFeWPGFN9MuhOf23Q9Ifjh" crossorigin="anonymous">
   <link rel="stylesheet" href="master.css">
+  <script src="cato.js"></script>
   <title>Hello, world!</title>
 </head>
 
@@ -38,6 +39,68 @@
       </ul>
     </div>
   </nav>
+
+  <br><br><br><br><br>
+
+  <div class="ml-4 mr-3 card">
+    <div class="card-body">
+      <p>Filters:</p>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio1" value="1" onclick="analyzeValue(this.value);">
+        <label class="form-check-label" for="inlineRadio1">Alles</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio2" value="2" onclick="analyzeValue(this.value);">
+        <label class="form-check-label" for="inlineRadio2">Politiek</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="3" onclick="analyzeValue(this.value);">
+        <label class="form-check-label" for="inlineRadio3">Streaming</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="4" onclick="analyzeValue(this.value);">
+        <label class="form-check-label" for="inlineRadio3">Verzamelaars</label>
+      </div>
+      <div class="form-check form-check-inline">
+        <input class="form-check-input" type="radio" name="inlineRadioOptions" id="inlineRadio3" value="5" onclick="analyzeValue(this.value);">
+        <label class="form-check-label" for="inlineRadio3">Next-Gen</label>
+      </div>
+    </div>
+  </div>
+
+  <br>
+
+  <div class="row">
+    <div class="ml-5 card politiek news" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Amerikaanse politicus zamelt 200.000 dollar in via stream game Among Us</h5>
+        <p class="card-text"></p>
+        <a href="https://www.nu.nl/tech/6093491/amerikaanse-politicus-zamelt-200000-dollar-in-via-stream-game-among-us.html" class="btn btn-primary">Naar artikel</a>
+      </div>
+    </div>
+
+    <div class="ml-3 card news verzamelaars" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Zeldzame Super Mario-game verkocht voor ruim 130.000 euro</h5>
+        <a href="https://www.nu.nl/games/6091929/zeldzame-super-mario-game-verkocht-voor-ruim-130000-euro.html" class="btn btn-primary">Naar artikel</a>
+      </div>
+    </div>
+
+    <div class="ml-3 card news next-gen" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Vijf vragen over de Xbox Series X en PlayStation 5 beantwoord</h5>
+        <a href="https://www.nu.nl/games/6091498/vijf-vragen-over-de-xbox-series-x-en-playstation-5-beantwoord.html" class="btn btn-primary">Naar artikel</a>
+      </div>
+    </div>
+
+    <div class="ml-3 card news verzamelaars" style="width: 18rem;">
+      <div class="card-body">
+        <h5 class="card-title">Google test iOS-versie van eigen gamestreamingdienst Stadia</h5>
+        <a href="https://www.nu.nl/tech/6091588/google-test-ios-versie-van-eigen-gamestreamingdienst-stadia.html" class="btn btn-primary">Naar artikel</a>
+      </div>
+    </div>
+
+  </div>
 
   <script src="https://code.jquery.com/jquery-3.4.1.slim.min.js" integrity="sha384-J6qa4849blE2+poT4WnyKhv5vZF5SrPo0iEjwBvKU7imGFAV0wwj1yYfoRSJoZ+n" crossorigin="anonymous"></script>
   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>

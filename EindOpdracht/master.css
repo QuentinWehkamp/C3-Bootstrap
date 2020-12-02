@@ -1,3 +1,6 @@
 body{
     background-color: #343a40;
+    max-width: 100%;
+    overflow-x: hidden;
 }
+

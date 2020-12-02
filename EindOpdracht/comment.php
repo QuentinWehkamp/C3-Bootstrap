@@ -49,6 +49,7 @@
             <input type="submit">
         </form>
     </div>
+    <br><br>
 
     <?php
     include 'conn.php';
@@ -58,7 +59,7 @@
     id INT(6) UNSIGNED AUTO_INCREMENT PRIMARY KEY,
     name VARCHAR(30) NOT NULL,
     comment TEXT(280) NOT NULL,
-    date DATE NOT NULL
+    date TIMESTAMP NULL DEFAULT CURRENT_TIMESTAMP
     )";
 
     $db->query($table);
@@ -69,13 +70,30 @@
         $name = $_POST['name'];
         $comment = $_POST['opmerking'];
 
-        $insertcomment = "INSERT INTO comments(name, comment) VALUES('$name','$comment')";
+        $insertcomment = "INSERT IGNORE INTO comments(name, comment) VALUES('$name','$comment')";
 
         if (isset($name, $comment)) {
             if ($db->query($insertcomment)) {
                 echo "<p>Opmerking geplaatst</p>";
             }
         }
+    };
+    //
+
+    // Display comment
+    $query = "SELECT id, name, comment FROM comments";
+    $result = $db->query($query);
+    if ($result->num_rows > 0) {
+        while ($row = $result->fetch_assoc()) {
+            echo '<div class="container media text-white">';
+            echo    '<img class=" mr-3" src="files/p_image.jpg" alt="Generic placeholder image">';
+            echo    '<div class="media-body">';
+            echo        '<h5 class="mt-0">' . $row["name"] . '</h5>';
+            echo        '<p>' . $row["comment"].'</p>';
+            echo    '</div>';
+            echo '</div>';
+            echo '<br>';
+        };
     };
     //
 
