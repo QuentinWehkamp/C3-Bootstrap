@@ -74,7 +74,6 @@
 
         if (isset($name, $comment)) {
             if ($db->query($insertcomment)) {
-                echo "<p>Opmerking geplaatst</p>";
             }
         }
     };
